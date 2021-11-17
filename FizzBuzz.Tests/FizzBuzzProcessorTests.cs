@@ -3,60 +3,132 @@ using Xunit;
 
 namespace FizzBuzz.Tests
 {
-	public class FizzBuzzProcessorTests
-	{
-		[Fact]
-		public void Should_Return_1_When_1_is_entered()
-		{
-			FizzBuzzProcessor.Calculate(1).Should().Be("1");
-		}
+    public class FizzBuzzProcessorTests
+    {
+        [Fact]
+        public void Given1AsInput_WhenCallingCalculate_ThenItShouldReturn1()
+        {
+            // Arrange
+            int input = 1;
+            string expected = "1";
 
-		[Fact]
-		public void Should_Return_2_When_2_is_entered()
-		{
-			FizzBuzzProcessor.Calculate(2).Should().Be("2");
-		}
+            // Act
+            string result = FizzBuzzProcessor.Calculate(input);
 
-		[Fact]
-		public void Should_Return_4_When_4_is_entered()
-		{
-			FizzBuzzProcessor.Calculate(4).Should().Be("4");
-		}
+            // Assert
+            result.Should().Be(expected);
+        }
 
-		[Fact]
-		public void Should_Return_Fizz_When_3_is_entered()
-		{
-			FizzBuzzProcessor.Calculate(3).Should().Be("Fizz");
-		}
+        [Fact]
+        public void Given2AsInput_WhenCallingCalculate_ThenItShouldReturn2()
+        {
+            // Arrange
+            int input = 2;
+            string expected = "2";
 
-		[Fact]
-		public void Should_Return_Fizz_When_9_is_entered()
-		{
-			FizzBuzzProcessor.Calculate(9).Should().Be("Fizz");
-		}
+            // Act
+            string result = FizzBuzzProcessor.Calculate(input);
 
-		[Fact]
-		public void Should_Return_Buzz_When_5_is_entered()
-		{
-			FizzBuzzProcessor.Calculate(5).Should().Be("Buzz");
-		}
+            // Assert
+            result.Should().Be(expected);
+        }
 
-		[Fact]
-		public void Should_Return_Buzz_When_10_is_entered()
-		{
-			FizzBuzzProcessor.Calculate(10).Should().Be("Buzz");
-		}
+        [Fact]
+        public void Given4AsInput_WhenCallingCalculate_ThenItShouldReturn4()
+        {
+            // Arrange
+            int input = 4;
+            string expected = "4";
 
-		[Fact]
-		public void Should_Return_FizzBuzz_When_15_is_entered()
-		{
-			FizzBuzzProcessor.Calculate(15).Should().Be("FizzBuzz");
-		}
+            // Act
+            string result = FizzBuzzProcessor.Calculate(input);
 
-		[Fact]
-		public void Should_Return_FizzBuzz_When_30_is_entered()
-		{
-			FizzBuzzProcessor.Calculate(30).Should().Be("FizzBuzz");
-		}
-	}
+            // Assert
+            result.Should().Be(expected);
+        }
+
+        [Fact]
+        public void Given3AsInput_WhenCallingCalculate_ThenItShouldReturnFizz()
+        {
+            // Arrange
+            int input = 3;
+            string expected = "Fizz";
+
+            // Act
+            string result = FizzBuzzProcessor.Calculate(input);
+
+            // Assert
+            result.Should().Be(expected);
+        }
+
+        [Fact]
+        public void Given9AsInput_WhenCallingCalculate_ThenItShouldReturnFizz()
+        {
+            // Arrange
+            int input = 9;
+            string expected = "Fizz";
+
+            // Act
+            string result = FizzBuzzProcessor.Calculate(input);
+
+            // Assert
+            result.Should().Be(expected);
+        }
+
+        [Fact]
+        public void Given5AsInput_WhenCallingCalculate_ThenItShouldReturnBuzz()
+        {
+            // Arrange
+            int input = 5;
+            string expected = "Buzz";
+
+            // Act
+            string result = FizzBuzzProcessor.Calculate(input);
+
+            // Assert
+            result.Should().Be(expected);
+        }
+
+        [Fact]
+        public void Given10AsInput_WhenCallingCalculate_ThenItShouldReturnBuzz()
+        {
+            // Arrange
+            int input = 10;
+            string expected = "Buzz";
+
+            // Act
+            string result = FizzBuzzProcessor.Calculate(input);
+
+            // Assert
+            result.Should().Be(expected);
+        }
+
+        [Fact]
+        public void Given15AsInput_WhenCallingCalculate_ThenItShouldReturnFizzBuzz()
+        {
+            // Arrange
+            int input = 15;
+            string expected = "FizzBuzz";
+
+            // Act
+            string result = FizzBuzzProcessor.Calculate(input);
+
+            // Assert
+            result.Should().Be(expected);
+        }
+
+        [Fact]
+        public void Given30AsInput_WhenCallingCalculate_ThenItShouldReturnFizzBuzz()
+        {
+            // Arrange
+            int input = 30;
+            string expected = "FizzBuzz";
+
+            // Act
+            string result = FizzBuzzProcessor.Calculate(input);
+
+            // Assert
+            result.Should().Be(expected);
+        }
+    }
 }
